@@ -141,7 +141,7 @@ $ kubectl proxy
 curl http://localhost:8001/api/v1/proxy/namespaces/frontend/services/sample-app-svc:80/
 
 ====================================================================
-
+# [CI WITH JENKINS] (https://cloud.google.com/solutions/jenkins-on-container-engine)
 
 ## Create namespace and Deploy jenkins to Kubernetes
 
