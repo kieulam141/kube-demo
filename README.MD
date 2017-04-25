@@ -99,6 +99,11 @@ $ kubectl proxy
 ```
 curl http://localhost:8001/api/v1/proxy/namespaces/backend/services/sample-backend-svc:8080/
 
+4.Scale the backend service:
+```shell
+$ kubectl --namespace=backend scale deployment sample-backend-dc --replicas=2
+```
+
 ## Create namespace and Deploy frontend app to Kubernetes
 
 Create the `frontend` namespace:
