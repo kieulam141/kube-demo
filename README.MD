@@ -21,7 +21,7 @@ In this section you will start your [Google Cloud Shell](https://cloud.google.co
 
   ```shell
   $ gcloud config set compute/zone asia-east1-a
-  $ gcloud config set project gdg-demo-165104
+  $ gcloud config set project gdg-demo-165702
   ```
 
 ## Create a Kubernetes Cluster
@@ -45,7 +45,7 @@ $ kubectl cluster-info
 ```
 Once that operation completes download the credentials for your cluster using the [gcloud CLI](https://cloud.google.com/sdk/):
 ```shell
-$ gcloud container clusters get-credentials gdg-demo-165104
+$ gcloud container clusters get-credentials gdg-demo-165702
 Fetching cluster endpoint and auth data.
 kubeconfig entry generated for gdg-demo.
 ```
@@ -77,13 +77,13 @@ $ docker build -t kube-sample-backend .
 1. Add the tag to your image:
 
 ```shell
-docker tag kube-sample-backend asia.gcr.io/gdg-demo-165104/kube-sample-backend
+docker tag kube-sample-backend asia.gcr.io/gdg-demo-165702/kube-sample-backend
 ```
 
 2. Then, use the gcloud command-line tool to push the image to the Google Container Registry:
 
 ```shell
-gcloud docker -- push asia.gcr.io/gdg-demo-165104/kube-sample-backend
+gcloud docker -- push asia.gcr.io/gdg-demo-165702/kube-sample-backend
 ```
 3. Create Deployments and Services:
 
@@ -119,12 +119,12 @@ $ docker build -t kube-sample-app .
 
 1. Add the tag to your image:
 ```shell
-docker tag kube-sample-app asia.gcr.io/gdg-demo-165104/kube-sample-app
+docker tag kube-sample-app asia.gcr.io/gdg-demo-165702/kube-sample-app
 ```
 
 2. Then, use the gcloud command-line tool to push the image to the Google Container Registry:
 ```shell
-gcloud docker -- push asia.gcr.io/gdg-demo-165104/kube-sample-app
+gcloud docker -- push asia.gcr.io/gdg-demo-165702/kube-sample-app
 ```
 
 3. Create Deployments and Services:
